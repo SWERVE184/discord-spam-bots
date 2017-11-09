@@ -1,0 +1,41 @@
+import discord
+import asyncio
+import sys
+import time
+from config import *
+
+client = discord.Client()
+token = sys.argv[1]
+spam_text = sys.argv[2]
+
+@client.event
+async def on_ready():
+    print("Started Text Spam")
+    for server in client.servers:
+        if(server.id == DiscordServer):
+            for member in server.members:
+                if(member.id != client.user.id):
+                    userNames = open('dm_spam.txt');
+                    text = userNames.read().strip().split()
+                    if str(member) in text: 
+                        print(str(member) + ' was found')
+                    else:
+                        print('Sent message to '+ str(member))
+                        await client.send_message(member, spam_text)
+                        file = open('dm_spam.txt','a')
+                        file.writelines(str(member)+'\n')
+                        file.close()
+                        for remaining in range(31, 0, -1):# Changes how fast the messages are sent. (Discord has a 10 minute cool down for every 10 users)
+                            sys.stdout.write("\r")
+                            sys.stdout.write("{:2d} seconds remaining.".format(remaining))
+                            sys.stdout.flush()
+                            await asyncio.sleep(1)
+                        sys.stdout.write("\rComplete!\n")
+    
+client.run(token, bot=False)
+
+        
+
+
+
+
