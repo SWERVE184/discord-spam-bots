@@ -13,7 +13,7 @@
 - Text Spammer (Let everyone know you are buying a GF.)
 
 # Requirements 
-- Python3
+- Python 3 (3.6 is recommended due to some names having unicode)
 - Discord API (pip install discord.py)
 - Beautiful Soup 4 (pip install bs4)
 
@@ -33,4 +33,4 @@ Discord really needs to work on their anti-spam, so look at this as almost a too
 
 If i find out its being using for toxic reasons I'll remove it or if discord asks me too.
 
-![its a face](http://i.imgur.com/bTMYozm.png)
+![its a face :)](http://i.imgur.com/bTMYozm.png)
