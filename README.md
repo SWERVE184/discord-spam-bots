@@ -1,4 +1,4 @@
-### Simple python scripts to make people salty 
+### Simple Spam Testing Scripts.
 
 
 [Buy me a Dr.Pepper (Because alcohol is nasty)](https://www.paypal.me/Merubokkusu)
