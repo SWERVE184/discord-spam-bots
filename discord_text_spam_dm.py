@@ -3,18 +3,26 @@ import discord
 import asyncio
 import sys
 import time
+import random
+import string
 from config import *
 
 client = discord.Client()
 token = sys.argv[1]
 spam_text = sys.argv[2]
 UserList = []
+emojiList = [':smile:',':laughing:',':slight_smile:',':hot_pepper:',':smirk:']#You can configure these to your likings 
 
 @client.event
 async def on_ready():
     print("Started Text Spam")
     for server in client.servers:
-        if(server.id == DiscordServer):
+        if ScanAllServers == False:
+            if(server.id == DiscordServer):
+                for member in server.members:
+                    if(member.id != client.user.id):
+                        UserList.append(member)
+        else:
             for member in server.members:
                 if(member.id != client.user.id):
                     UserList.append(member)
@@ -27,7 +35,7 @@ async def on_ready():
         else:
             try:
                 print('Sent message to '+ member.name)
-                await client.send_message(member, spam_text)
+                await client.send_message(member,spam_text+" "+random.choice(emojiList)+random.choice(emojiList))
                 file = open('dm_spam.txt','a')
                 file.writelines(member.id + '\n')
                 file.close()
@@ -39,5 +47,5 @@ async def on_ready():
                 sys.stdout.write("\rComplete!                    \n")
             except Exception:
                 print('Something went wrong (;3;)') 
-    
+
 client.run(token, bot=False)
