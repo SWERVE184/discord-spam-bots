@@ -11,11 +11,34 @@ token = sys.argv[1]
 
 @client.event
 async def on_ready():
-    print("Started Image Spam")
-    while not client.is_closed:
-            UpImage = random.choice(os.listdir(DirPictures)) 
-            print(UpImage)
-            await client.send_file(discord.Object(id=DiscordChannel), DirPictures + UpImage)
-            await asyncio.sleep(0.7) # Changes how fast the images are posted. (Anything under 0.7 tends to break it (┛✧Д✧))┛彡┻━┻ )
+    for server in client.servers:
+        if ScanAllServers == False:
+            if(server.id == DiscordServer):
+                UserList = server.members
+        else:
+            UserList = server.members
+                    
+    for member in UserList:
+        if(member.id != client.user.id):
+            userNames = open('dm_spam_image.txt');
+            text = userNames.read().strip().split()
+            if member.id in text: 
+                print(member.name + ' was already messaged')
+            else:
+                try:
+                    UpImage = random.choice(os.listdir(DirPictures)) 
+                    await client.send_file(member, DirPictures + UpImage)
+                    print('Sent '+UpImage +' To '+ member.name)
+                    file = open('dm_spam_image.txt','a')
+                    file.writelines(member.id + '\n')
+                    file.close()
+                    for remaining in range(31, 0, -1):# Changes how fast the messages are sent. (Discord has a 10 minute cool down for every 10 users)
+                        sys.stdout.write("\r")
+                        sys.stdout.write("{:2d} seconds remaining.".format(remaining))
+                        sys.stdout.flush()
+                        await asyncio.sleep(1)
+                    sys.stdout.write("\rComplete!                    \n")
+                except Exception:
+                    print('Something went wrong (;3;) relaunching...')
 
 client.run(token, bot=False)
