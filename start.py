@@ -55,7 +55,7 @@ if in_pick == 4:
         sleep(2.5)
 
 if in_pick == 5:
-        if not os.path.exists('dm_spam_image.txt'):
+    if not os.path.exists('dm_spam_image.txt'):
         file = open('dm_spam_image.txt','w')
         file.write('=====Merubokkusu=====\n')#This is written for bug issues :/
         file.close()
