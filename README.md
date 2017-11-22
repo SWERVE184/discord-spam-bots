@@ -5,6 +5,8 @@
 
 [Or give me anything on on Steam](https://steamcommunity.com/tradeoffer/new/?partner=94720138&token=GY23F7tU)
 
+[Video Demo Of Bots (not all of them)](https://www.youtube.com/watch?v=SmusHGAIeu4)
+
 
 # Features 
 - Mulitple accounts(Kind of working. had to make two new accounts to test. Since I'm not using my main for reasons).
