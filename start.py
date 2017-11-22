@@ -6,10 +6,6 @@ from config import *
 
 w1 = "EDIT YOUR CONFIG.PY BEFORE USING!\n"
 
-def worker(file,token):
-    print(token + " " + file)
-    subprocess.call(file, shell=True)
-
 for char in w1:
     sleep(0.01)
     sys.stdout.write(char)
