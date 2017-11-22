@@ -19,5 +19,4 @@ async def on_ready():
         await client.send_message(discord.Object(id=DiscordChannel), insult_text.text)
         await asyncio.sleep(0.7) # Changes how fast the messages are posted. (Anything under 0.7 tends to break it
     
-print(token)    
 client.run(token,bot=False)
