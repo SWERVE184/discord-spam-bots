@@ -30,11 +30,8 @@ in_pick = float(input("Select a bot: "))
 if in_pick == 1:
     spam_text = input("Write spam text : ")
     for token in userToken:
-        print('Loading Token')
         p = subprocess.Popen(['python','bots\server\discord_text_spam.py',token,spam_text],shell=True)
         sleep(1)
-        print("Token Loaded.")
-        print(' ')
 
 if in_pick == 2:
     for token in userToken:
