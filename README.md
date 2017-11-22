@@ -1,9 +1,9 @@
-### Simple Spam Testing Scripts.
+## Simple Spam Testing Scripts.
+### [DOWNLOAD](https://github.com/Merubokkusu/discord-spam-bots/archive/master.zip)
 
 
-[Buy me a Dr.Pepper (Because alcohol is nasty)](https://www.paypal.me/Merubokkusu)
 
-[Or give me anything on on Steam](https://steamcommunity.com/tradeoffer/new/?partner=94720138&token=GY23F7tU)
+[Buy me a Dr.Pepper (Because alcohol is nasty)](https://www.paypal.me/Merubokkusu) | [Or give me anything on on Steam](https://steamcommunity.com/tradeoffer/new/?partner=94720138&token=GY23F7tU)
 
 [Video Demo Of Bots (not all of them)](https://www.youtube.com/watch?v=SmusHGAIeu4)
 
