@@ -26,7 +26,7 @@ Edit DirPictures with your folder location.
 Run start.py
 
 # Final Notes
-This is made for just messing around with your friends, not for using it on servers to troll and be toxic on.
+This is made for server owners to improve their server bots anti-spam, not for using it on servers to troll and be toxic on.
 
 
 Its also another reason for discord to improve their anti-spam, such as cool down for typing the same word more than 5 times.
