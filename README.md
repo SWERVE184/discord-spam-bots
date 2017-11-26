@@ -31,6 +31,11 @@ Edit DirPictures with your folder location.
 
 Run start.py
 
+
+# To Do
+Auto Join Servers
+
+
 # Final Notes
 This is made for server owners to improve their server bots anti-spam, not for using it on servers to troll and be toxic on.
 
