@@ -9,7 +9,7 @@
 
 
 # Features 
-- Mulitple accounts(Kind of working. had to make two new accounts to test. Since I'm not using my main for reasons).
+- Mulitple accounts
 - Image Spammer
 - Insult Spammer
 - Text Spammer (Let everyone know you are buying a GF.)
