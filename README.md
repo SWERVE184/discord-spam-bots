@@ -33,7 +33,7 @@ Run start.py
 
 
 # To Do
-Auto Join Servers
+Auto Join Servers (This is a tough one, any help is appreciated) 
 
 
 # Final Notes
