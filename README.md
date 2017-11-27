@@ -12,7 +12,7 @@
 - Mulitple accounts
 - Image Spammer
 - Insult Spammer
-- Text Spammer (Let everyone know you are buying a GF.)
+- Text Spammer
 
 # Requirements 
 - Python 3 (3.6 is recommended due to some names having unicode)
