@@ -22,7 +22,7 @@
 
 # Use
 Edit the config with your token for discord.
-[How to get your user token](https://www.youtube.com/watch?v=80k9h62qIPk)
+[How to get your user token](https://github.com/TheRacingLion/Discord-SelfBot/wiki/Discord-Token-Tutorial)
 
 Edit Channel ID to the servers channel.
 
