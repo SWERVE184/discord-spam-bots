@@ -4,7 +4,11 @@ import os
 from time import sleep
 from config import *
 
-w1 = "EDIT YOUR CONFIG.PY BEFORE USING!\n"
+if os.path.exists('tokens.txt'):
+    userToken = open("tokens.txt").read().splitlines()
+    w1 = "EDIT YOUR CONFIG.PY BEFORE USING!\n-=Using tokens.txt=-\n"
+else:
+    w1 = "EDIT YOUR CONFIG.PY BEFORE USING!\n"
 
 for char in w1:
     sleep(0.01)
@@ -21,7 +25,9 @@ print("4 : Text Spammer - Write your own text to spam")
 print("5 : Image Spammer - Spam random images in a selected folder")
 print("6 : Insult Spammer - Picks insults offline and spams them")
 
+
 in_pick = float(input("Select a bot: "))
+
 
 if in_pick == 1:
     spam_text = input("Write spam text : ")
