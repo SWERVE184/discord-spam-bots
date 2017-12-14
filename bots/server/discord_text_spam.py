@@ -14,7 +14,7 @@ async def on_ready():
     while not client.is_closed:
         print(spam_text)
         await client.send_message(discord.Object(id=DiscordChannel), spam_text)
-        await asyncio.sleep(0.7) # Changes how fast the messages are posted. (Anything under 0.7 tends to break it (┛✧Д✧))┛彡┻━┻ )
+        await asyncio.sleep(SpamSpeed) 
 
 client.run(token, bot=False)
 
