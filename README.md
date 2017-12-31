@@ -47,4 +47,8 @@ Discord really needs to work on their anti-spam, so look at this as almost a too
 
 If i find out its being using for toxic reasons I'll remove it or if discord asks me too.
 
+
+![beware](https://a.safe.moe/2017C.png)
+
+
 ![its a face :)](http://i.imgur.com/bTMYozm.png)
