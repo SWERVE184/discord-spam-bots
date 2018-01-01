@@ -21,7 +21,7 @@ async def on_ready():
         else:
             UserList = server.members
 
-    for member in UserList:
+    for member in list(UserList):
         if(member.id != client.user.id):
             userNames = open('dm_spam_insult.txt');
             text = userNames.read().strip().split()
