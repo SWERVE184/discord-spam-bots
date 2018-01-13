@@ -2,6 +2,7 @@
 import discord
 import asyncio
 import sys
+import os
 import time
 import random
 sys.path.append("./.")
@@ -12,6 +13,7 @@ token = sys.argv[1]
 spam_text = sys.argv[2]
 UserList = []
 emojiList = [':smile:',':laughing:',':slight_smile:',':hot_pepper:',':smirk:']#You can configure these to your likings 
+
 
 @client.event
 async def on_ready():
@@ -27,6 +29,12 @@ async def on_ready():
             if(member.id != client.user.id):
                 userNames = open('dm_spam_text.txt');
                 text = userNames.read().strip().split()
+                if textRandom == False:
+                    lines = open('text.txt').read().splitlines()
+                    spam_text = lines[0]
+                else:
+                    lines = open('text.txt').read().splitlines()
+                    spam_text = random.choice(lines)
                 if member.id in text: 
                     print(member.name + ' was already messaged')
                 else:
@@ -50,10 +58,17 @@ async def on_ready():
             if(member.id != client.user.id):
                 userNames = open('dm_spam_text.txt');
                 text = userNames.read().strip().split()
+                if textRandom == False:
+                    lines = open('text.txt').read().splitlines()
+                    spam_text = lines[0]
+                else:
+                    lines = open('text.txt').read().splitlines()
+                    spam_text = random.choice(lines)
                 if member.id in text: 
                     print(member.name + ' was already messaged')
                 else:
                     try:
+                        getText()
                         await client.send_message(member,spam_text+" "+random.choice(emojiList)+random.choice(emojiList))
                         print('Sent message to '+ member.name)
                         file = open('dm_spam_text.txt','a')

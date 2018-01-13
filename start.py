@@ -30,10 +30,15 @@ in_pick = float(input("Select a bot: "))
 
 
 if in_pick == 1:
-    spam_text = input("Write spam text : ")
-    for token in userToken:
-        p = subprocess.Popen(['python','bots\server\discord_text_spam.py',token,spam_text],shell=True)
-        sleep(1)
+    if os.path.exists('text.txt'):
+        for token in userToken:
+            p = subprocess.Popen(['python','bots\server\discord_text_spam.py',token,'null'],shell=True)
+            sleep(1)
+    else:
+        spam_text = input("Write spam text : ")
+        for token in userToken:
+            p = subprocess.Popen(['python','bots\server\discord_text_spam.py',token,spam_text],shell=True)
+            sleep(1)
 
 if in_pick == 2:
     for token in userToken:
@@ -44,14 +49,23 @@ if in_pick == 3:
         p = subprocess.Popen(['python','bots\server\discord_insult_spam.py', token],shell=True)
 #DM Spammers
 if in_pick == 4:
-    if not os.path.exists('dm_spam_text.txt'):
-        file = open('dm_spam_text.txt','w')
-        file.write('=====Merubokkusu=====\n')#This is written for bug issues :/
-        file.close()
-    spam_text = input("Write spam text : ")
-    for token in userToken:
-        p = subprocess.Popen(['python','bots\DM\discord_text_spam_dm.py',token,spam_text],shell=True)
-        sleep(2.5)
+    if os.path.exists('text.txt'):
+        if not os.path.exists('dm_spam_text.txt'):
+            file = open('dm_spam_text.txt','w')
+            file.write('=====Merubokkusu=====\n')#This is written for bug issues :/
+            file.close()
+        for token in userToken:
+            p = subprocess.Popen(['python','bots\DM\discord_text_spam_dm.py',token,'null'],shell=True)
+            sleep(2.5)
+    else:
+        if not os.path.exists('dm_spam_text.txt'):
+            file = open('dm_spam_text.txt','w')
+            file.write('=====Merubokkusu=====\n')#This is written for bug issues :/
+            file.close()
+        spam_text = input("Write spam text : ")
+        for token in userToken:
+            p = subprocess.Popen(['python','bots\DM\discord_text_spam_dm.py',token,spam_text],shell=True)
+            sleep(2.5)
 
 if in_pick == 5:
     if not os.path.exists('dm_spam_image.txt'):
