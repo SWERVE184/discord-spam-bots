@@ -2,7 +2,7 @@
 userToken = [''] # User Token here, multiple accounts may work. example 'token','token'
 DiscordChannel = '' # Channel ID,
 SpamSpeed = 0.7 # Changes how fast the messages are posted. (Anything under 0.7 tends to break it (┛✧Д✧))┛彡┻━┻ )
-textRandom = True # if the root has 'text.txt' it will pick a random text line and send it.
+textRandom = False # if the root has 'text.txt' it will pick a random text line and send it.
 
 #DM Spam
 DiscordServer = '' # Server ID (https://a.safe.moe/KP4DR.png this one)
