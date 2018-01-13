@@ -21,6 +21,14 @@
 - Beautiful Soup 4 (pip install bs4)
 
 # Use
+Drag the discord-spam-bots-master folder to a location
+
+open Command Prompt Or PowerShell/Terminal  
+
+Type 'pip install discord.py' wait for it to finish then
+
+Type 'pip install bs4' wait for it to finish then close it.
+
 Edit the config with your token for discord.  
 Or create a file called "tokens.txt" and add them there  
 [How to get your user token](https://github.com/Merubokkusu/discord-spam-bots/wiki/Getting-Your-User-Token)  
