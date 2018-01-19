@@ -68,7 +68,6 @@ async def on_ready():
                     print(member.name + ' was already messaged')
                 else:
                     try:
-                        getText()
                         await client.send_message(member,spam_text+" "+random.choice(emojiList)+random.choice(emojiList))
                         print('Sent message to '+ member.name)
                         file = open('dm_spam_text.txt','a')
