@@ -1,10 +1,13 @@
-# -*- coding: utf-8 -*-
+#DO NOT REMOVE THIS
+#Made by Merubokkusu | www.merubokkusu.com
+#If you paid for this you got scammed.
 import discord
 import asyncio
 import sys
 import os
 import time
 import random
+import subprocess
 sys.path.append("./.")
 from config import *
 
@@ -13,11 +16,13 @@ token = sys.argv[1]
 spam_text = sys.argv[2]
 UserList = []
 emojiList = [':smile:',':laughing:',':slight_smile:',':hot_pepper:',':smirk:']#You can configure these to your likings 
+enp = []
+
 
 
 @client.event
 async def on_ready():
-    print("Started Text Spam")
+    print("Started Text Spam with " + client.user.name)
     for server in client.servers:
         if ScanAllServers == False:
             if(server.id == DiscordServer):
@@ -27,14 +32,15 @@ async def on_ready():
     if HeavyScrape == False:                
         for member in UserList:
             if(member.id != client.user.id):
+                if os.path.exists('text.txt'):
+                    if textRandom == False:
+                        lines = open('text.txt').read().splitlines()
+                        spam_text = lines[0]
+                    else:
+                        lines = open('text.txt').read().splitlines()
+                        spam_text = random.choice(lines)
                 userNames = open('dm_spam_text.txt');
                 text = userNames.read().strip().split()
-                if textRandom == False:
-                    lines = open('text.txt').read().splitlines()
-                    spam_text = lines[0]
-                else:
-                    lines = open('text.txt').read().splitlines()
-                    spam_text = random.choice(lines)
                 if member.id in text: 
                     print(member.name + ' was already messaged')
                 else:
@@ -56,14 +62,15 @@ async def on_ready():
         while not client.is_closed:
             member = random.choice(UserList)
             if(member.id != client.user.id):
+                if os.path.exists('text.txt'):
+                    if textRandom == False:
+                        lines = open('text.txt').read().splitlines()
+                        spam_text = lines[0]
+                    else:
+                        lines = open('text.txt').read().splitlines()
+                        spam_text = random.choice(lines)
                 userNames = open('dm_spam_text.txt');
                 text = userNames.read().strip().split()
-                if textRandom == False:
-                    lines = open('text.txt').read().splitlines()
-                    spam_text = lines[0]
-                else:
-                    lines = open('text.txt').read().splitlines()
-                    spam_text = random.choice(lines)
                 if member.id in text: 
                     print(member.name + ' was already messaged')
                 else:
@@ -82,4 +89,12 @@ async def on_ready():
                     except Exception:
                         print('Something went wrong (;3;) relaunching...')             
 
-client.run(token, bot=False)
+
+if '-:-' in token: 
+    enp = token.split('-:-')
+    p = subprocess.Popen(['python','bots/misc/joinServer.py',enp[0],enp[1],inviteLink],shell=True)
+    p.wait()
+
+    client.run(enp[0],enp[1], bot=False) 
+else: 
+    client.run(token, bot=False)
