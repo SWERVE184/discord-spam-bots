@@ -51,8 +51,11 @@ Run start.py
 
 # Auto Server Joining
 You must have Google Chrome installed.
+
 this does not work for tokens, only email and passwords.
+
 put your email and pass into the token slot in the config file or create a file called tokens.txt.
+
 The format for the email and pass is "email@gmail.com-:-password" without quotes.
 
 
