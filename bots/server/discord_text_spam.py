@@ -12,22 +12,26 @@ from config import *
 
 client = discord.Client()
 token = sys.argv[1]
+global spam_text
 spam_text = sys.argv[2]
 
-@client.event
-async def on_ready():
-    print("Started Text Spam")
-    while not client.is_closed:
-        if os.path.exists('text.txt'):
+def textFile():
+    if os.path.exists('text.txt'):
             if textRandom == False:
                 lines = open('text.txt').read().splitlines()
                 spam_text = lines[0]
             else:
                 lines = open('text.txt').read().splitlines()
                 spam_text = random.choice(lines)
-        print(spam_text)
+
+@client.event
+async def on_ready():
+    print("Started Text Spam")
+    while not client.is_closed:
+        textFile()
         await client.send_message(discord.Object(id=DiscordChannel), spam_text)
         await asyncio.sleep(SpamSpeed) 
+        print(client.user.name + ' sent ' + spam_text)
 
 if '-:-' in token: 
     enp = token.split('-:-')
