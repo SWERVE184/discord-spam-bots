@@ -3,7 +3,7 @@
 
 
 
-[Buy me a Dr.Pepper (Because alcohol is nasty)](https://www.paypal.me/Merubokkusu) | [Or give me anything on on Steam](https://steamcommunity.com/tradeoffer/new/?partner=94720138&token=GY23F7tU) | [Bitcoin](https://paste.safe.moe/raw/tapeniviru)
+[Buy me a Dr.Pepper (Because alcohol is nasty)](https://www.ko-fi.com/merubokkusu) | [Or give me anything on on Steam](https://steamcommunity.com/tradeoffer/new/?partner=94720138&token=GY23F7tU) | [Bitcoin](https://paste.safe.moe/raw/tapeniviru)
 
 [Video Demo Of Bots (not all of them)](https://www.youtube.com/watch?v=SmusHGAIeu4)
 
