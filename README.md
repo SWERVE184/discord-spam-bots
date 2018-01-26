@@ -7,8 +7,6 @@
 
 [Video Demo Of Bots (not all of them)](https://www.youtube.com/watch?v=SmusHGAIeu4)
 
-[Discord Server to discuss anti-spam/help with anti-spam](https://discord.gg/pAGcMjz)
-
 # Features 
 - Auto Server Joining (Only tested on Windows)
 - Mulitple accounts
