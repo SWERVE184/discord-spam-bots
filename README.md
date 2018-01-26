@@ -10,6 +10,7 @@
 [Discord Server to discuss anti-spam/help with anti-spam](https://discord.gg/pAGcMjz)
 
 # Features 
+- Auto Server Joining (Only tested on Windows)
 - Mulitple accounts
 - Image Spammer
 - Insult Spammer
@@ -19,13 +20,19 @@
 - Python 3 (3.6 is recommended due to some names having unicode)
 - Discord API (pip install discord.py)
 - Beautiful Soup 4 (pip install bs4)
+- Selenium (pip install selenium)
+- Google Chrome
 
 # Use
+Install Google Chrome.
+
 Drag the discord-spam-bots-master folder to a location
 
 open Command Prompt Or PowerShell/Terminal  
 
 Type 'pip install discord.py' wait for it to finish then
+
+Type 'pip install selenium' wait for it to finish then
 
 Type 'pip install bs4' wait for it to finish then close it.
 
@@ -42,8 +49,11 @@ Edit DirPictures with your folder location.
 Run start.py
 
 
-# To Do
-Auto Join Servers (This is a tough one, any help is appreciated) 
+# Auto Server Joining
+You must have Google Chrome installed.
+this does not work for tokens, only email and passwords.
+put your email and pass into the token slot in the config file or create a file called tokens.txt.
+The format for the email and pass is "email@gmail.com-:-password" without quotes.
 
 
 # Final Notes
