@@ -22,8 +22,8 @@ async def on_ready():
             await client.send_file(discord.Object(id=DiscordChannel), DirPictures + UpImage)
             await asyncio.sleep(SpamSpeed) # Changes how fast the images are posted. (Anything under 0.7 tends to break it (┛✧Д✧))┛彡┻━┻ )
 
-if '-:-' in token: 
-    enp = token.split('-:-')
+if ':' in token: 
+    enp = token.split(':')
     p = subprocess.Popen(['python','bots/misc/joinServer.py',enp[0],enp[1],inviteLink],shell=True)
     p.wait()
 

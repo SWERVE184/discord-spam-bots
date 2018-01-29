@@ -33,8 +33,8 @@ async def on_ready():
         await asyncio.sleep(SpamSpeed) 
         print(client.user.name + ' sent ' + spam_text)
 
-if '-:-' in token: 
-    enp = token.split('-:-')
+if ':' in token: 
+    enp = token.split(':')
     p = subprocess.Popen(['python','bots/misc/joinServer.py',enp[0],enp[1],inviteLink],shell=True)
     p.wait()
 
