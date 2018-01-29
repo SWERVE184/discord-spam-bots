@@ -58,6 +58,8 @@ put your email and pass into the token slot in the config file or create a file 
 
 The format for the email and pass is "email@gmail.com:password" without quotes.
 
+You can either set autojoinServer to True or use the bot '0'
+
 
 # Final Notes
 This is made for server owners to improve their server bots anti-spam, not for using it on servers to troll and be toxic on.
