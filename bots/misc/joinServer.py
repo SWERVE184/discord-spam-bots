@@ -23,7 +23,10 @@ if os.path.exists('proxies.txt'):
     lines = open('proxies.txt').read().splitlines()
     PROXY = lines[0]
     del lines[0]
-    open('proxies.txt', 'w').writelines(lines)
+    prox = open('proxies.txt', 'w')
+    for l in lines:
+        prox.write(l+'\n')
+    prox.close()
     chromeOptions.add_argument('--proxy-server='+PROXY)
 
 print("Starting Server Join")
