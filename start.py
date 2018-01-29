@@ -24,7 +24,8 @@ print("         +========-DM Spammers-=========+      ")
 print("4 : Text Spammer - Write your own text to spam")
 print("5 : Image Spammer - Spam random images in a selected folder")
 print("6 : Insult Spammer - Picks insults offline and spams them")
-
+print("           +========-Other-=========+")
+print("0 : Join Server - Join the server thats written in the config")
 
 in_pick = float(input("Select a bot: "))
 
@@ -82,4 +83,12 @@ if in_pick == 6:
         file.close()
     for token in userToken:
         p = subprocess.Popen(['python','bots\DM\discord_insult_spam_dm.py', token],shell=True)
+
+if in_pick == 0:
+    for token in userToken:
+        if ':' in token: 
+            enp = token.split(':')
+            p = subprocess.Popen(['python','bots/misc/joinServer.py',enp[0],enp[1],inviteLink],shell=True)
+            sleep(0.5)
+
 p.wait()
