@@ -49,5 +49,6 @@ browser.find_element_by_css_selector("div.link-container.control-group > input[t
 browser.find_element_by_css_selector("div.link-container.control-group > input[type=\"text\"]").send_keys(inviteLink)
 print("Writing invite link")
 browser.find_element_by_css_selector("div.form-actions > button.btn.btn-primary").click()
+time.sleep(0.5)
 print("Joined Server | Closing Script")
 browser.quit()
