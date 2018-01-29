@@ -60,6 +60,8 @@ The format for the email and pass is "email@gmail.com:password" without quotes.
 
 You can either set autojoinServer to True or use the bot '0'
 
+Proxies are required(sometimes) so create a file called 'proxies.txt' with a proxy every line if you wish to use proxies.
+
 
 # Final Notes
 This is made for server owners to improve their server bots anti-spam, not for using it on servers to troll and be toxic on.
