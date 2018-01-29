@@ -36,7 +36,7 @@ Type 'pip install selenium' wait for it to finish then
 
 Type 'pip install bs4' wait for it to finish then close it.
 
-Edit the config with your token for discord.  
+Edit the config with your token/emaill&pass for discord.  
 Or create a file called "tokens.txt" and add them there  
 [How to get your user token](https://github.com/Merubokkusu/discord-spam-bots/wiki/Getting-Your-User-Token)  
 
