@@ -9,13 +9,23 @@ from selenium.webdriver.common.action_chains import ActionChains
 from sys import platform
 import time
 import sys
+import os
 
 
 email = sys.argv[1]
 password = sys.argv[2]
 inviteLink = sys.argv[3]
+
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_argument("headless")
+
+if os.path.exists('proxies.txt'):
+    lines = open('proxies.txt').read().splitlines()
+    PROXY = lines[0]
+    del lines[0]
+    open('proxies.txt', 'w').writelines(lines)
+    chromeOptions.add_argument('--proxy-server='+PROXY)
+
 print("Starting Server Join")
 if platform == "linux" or platform == "linux2":
     browser = webdriver.Chrome('resources/webdrivers/chromedriver-linux',chrome_options=chromeOptions)
@@ -25,20 +35,20 @@ elif platform == "win32":
     browser = webdriver.Chrome('resources/webdrivers/chromedriver.exe',chrome_options=chromeOptions)
 
 browser.get("https://discordapp.com/login")
-element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "register-email")))
+element = WebDriverWait(browser, 60).until(EC.presence_of_element_located((By.ID, "register-email")))
 browser.find_element_by_id("register-email").send_keys(email)
 print("Writing Email")
 browser.find_element_by_id("register-password").send_keys(password)
 print("Writing Password")
 browser.find_element_by_css_selector("button.btn.btn-primary").click()
-element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "guilds-add-inner")))
+element = WebDriverWait(browser, 60).until(EC.presence_of_element_located((By.CLASS_NAME, "guilds-add-inner")))
 browser.execute_script('document.getElementsByTagName("body")[0].appendChild(document.getElementsByClassName("guilds-wrapper")[0])')
-element = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "app-mount")))
+element = WebDriverWait(browser, 60).until(EC.presence_of_element_located((By.ID, "app-mount")))
 browser.execute_script('var el = document.querySelector( ".app-XZYfmp" ); el.parentNode.removeChild( el );')
 mainmenu = browser.find_element_by_class_name("guilds-add-inner")
 action=ActionChains(browser)
 action.move_to_element(mainmenu).perform()
-submenu = WebDriverWait(browser, 10).until(EC.element_to_be_clickable((By.CLASS_NAME, "guilds-add-inner")))
+submenu = WebDriverWait(browser, 60).until(EC.element_to_be_clickable((By.CLASS_NAME, "guilds-add-inner")))
 print("Attempting to click") # Master hacking.
 submenu.click()
 print("Click success")
