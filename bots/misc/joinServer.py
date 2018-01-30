@@ -18,6 +18,7 @@ inviteLink = sys.argv[3]
 
 chromeOptions = webdriver.ChromeOptions()
 chromeOptions.add_argument("headless")
+chromeOptions.add_argument("disable-gpu")
 
 if os.path.exists('proxies.txt'):
     lines = open('proxies.txt').read().splitlines()
